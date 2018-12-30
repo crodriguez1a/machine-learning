@@ -13142,7 +13142,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[483]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13214,23 +13214,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[485]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 
 <span class="c1"># Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
 <span class="c1"># Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
 <span class="c1"># Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 
 <span class="c1"># Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13305,7 +13305,7 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[255]:</div>
+<div class="prompt input_prompt">In&nbsp;[488]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reference: https://realpython.com/python-histograms/#visualizing-histograms-with-matplotlib-and-pandas</span>
@@ -13317,11 +13317,13 @@ Standard deviation of prices: $165340.27765266784
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># An &quot;interface&quot; to matplotlib.axes.Axes.hist() method</span>
     <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+    
     <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Feature: </span><span class="si">{label}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
-    <span class="n">maxfreq</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+   
     <span class="c1"># Set a clean upper y-axis limit.</span>
+    <span class="n">maxfreq</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">ymax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">maxfreq</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span> <span class="k">if</span> <span class="n">maxfreq</span> <span class="o">%</span> <span class="mi">10</span> <span class="k">else</span> <span class="n">maxfreq</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
     
 </pre></div>
@@ -13333,7 +13335,7 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[256]:</div>
+<div class="prompt input_prompt">In&nbsp;[489]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_frequency</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="s1">&#39;MEDV&#39;</span><span class="p">)</span>
@@ -13368,7 +13370,7 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[271]:</div>
+<div class="prompt input_prompt">In&nbsp;[490]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ratio of students to teachers</span>
@@ -13404,7 +13406,7 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[272]:</div>
+<div class="prompt input_prompt">In&nbsp;[491]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># percentage of homeowners considered working poor</span>
@@ -13440,7 +13442,7 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[273]:</div>
+<div class="prompt input_prompt">In&nbsp;[492]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># average number of rooms</span>
@@ -13499,17 +13501,17 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[235]:</div>
+<div class="prompt input_prompt">In&nbsp;[495]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">r2_score</span>
 
-<span class="k">def</span> <span class="nf">performance_metric</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">performance_metric</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; Calculates and returns the performance score between </span>
 <span class="sd">        true and predicted values based on the metric chosen. &quot;&quot;&quot;</span>
     
     <span class="c1"># Calculate the performance score between &#39;y_true&#39; and &#39;y_predict&#39;</span>
-    <span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span>  
+    <span class="n">score</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span>  
     
     <span class="c1"># Return the score</span>
     <span class="k">return</span> <span class="n">score</span>
@@ -13560,11 +13562,11 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[236]:</div>
+<div class="prompt input_prompt">In&nbsp;[496]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">])</span>
+<span class="n">score</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model has a coefficient of determination, R^2, of </span><span class="si">{:.3f}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 
@@ -13636,7 +13638,7 @@ Standard deviation of prices: $165340.27765266784
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[237]:</div>
+<div class="prompt input_prompt">In&nbsp;[497]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
@@ -13934,7 +13936,7 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[435]:</div>
+<div class="prompt input_prompt">In&nbsp;[504]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeRegressor</span>
@@ -13944,16 +13946,16 @@ Think about the pros and cons of adding more training points based on if the tra
 <span class="n">shuffle</span><span class="p">:</span><span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># n_splits, test_size, random_state</span>
 <span class="n">dt_params</span><span class="p">:</span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">]}</span>
     
-<span class="k">def</span> <span class="nf">fit_model</span><span class="p">(</span><span class="n">X</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">shuffle</span><span class="p">:</span><span class="nb">tuple</span><span class="o">=</span><span class="n">shuffle</span><span class="p">,</span> <span class="n">regressor</span><span class="p">:</span><span class="nb">any</span><span class="o">=</span><span class="n">DecisionTreeRegressor</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span><span class="nb">dict</span><span class="o">=</span><span class="n">dt_params</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">fit_model</span><span class="p">(</span><span class="n">X</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">shuffle</span><span class="p">:</span><span class="nb">tuple</span><span class="o">=</span><span class="n">shuffle</span><span class="p">,</span> <span class="n">regressor</span><span class="p">:</span><span class="nb">any</span><span class="o">=</span><span class="n">DecisionTreeRegressor</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span><span class="nb">dict</span><span class="o">=</span><span class="n">dt_params</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">any</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; Performs grid search over the &#39;max_depth&#39; parameter for a </span>
 <span class="sd">        decision tree regressor trained on the input data [X, y]. &quot;&quot;&quot;</span>
     
     <span class="c1"># Create cross-validation sets from the training data</span>
     <span class="n">n_splits</span><span class="p">,</span> <span class="n">test_size</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="n">shuffle</span>
-    <span class="n">cv_sets</span> <span class="o">=</span> <span class="n">ShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span> <span class="o">=</span> <span class="n">n_splits</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">test_size</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="n">random_state</span><span class="p">)</span>
+    <span class="n">cv_sets</span><span class="p">:</span><span class="n">ShuffleSplit</span> <span class="o">=</span> <span class="n">ShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span> <span class="o">=</span> <span class="n">n_splits</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">test_size</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="n">random_state</span><span class="p">)</span>
     
     <span class="c1"># Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
-    <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
+    <span class="n">scoring_fnc</span><span class="p">:</span><span class="n">callable</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
 
     <span class="c1"># Initialize regressor</span>
     <span class="n">regressor_instance</span><span class="p">:</span><span class="nb">any</span> <span class="o">=</span> <span class="n">regressor</span><span class="p">()</span>
@@ -13964,8 +13966,8 @@ Think about the pros and cons of adding more training points based on if the tra
     <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">regressor_instance</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="n">scoring_fnc</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">cv_sets</span><span class="p">)</span>
 
     <span class="c1"># Fit the grid search object to the data to compute the optimal model</span>
-    <span class="n">grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
+    <span class="n">grid</span><span class="p">:</span><span class="n">GridSearchCV</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    
     <span class="c1"># Return the optimal model after fitting the data</span>
     <span class="k">return</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
 </pre></div>
@@ -13996,7 +13998,7 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[436]:</div>
+<div class="prompt input_prompt">In&nbsp;[505]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -14083,17 +14085,16 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[471]:</div>
+<div class="prompt input_prompt">In&nbsp;[507]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
-<span class="n">client_data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="c1"># Client 1</span>
+<span class="n">client_data</span><span class="p">:</span><span class="nb">list</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="c1"># Client 1</span>
                <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">22</span><span class="p">],</span> <span class="c1"># Client 2</span>
                <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]]</span>  <span class="c1"># Client 3</span>
 
-<span class="c1"># Show predictions</span>
 <span class="n">predictions</span><span class="p">:</span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="n">price</span> <span class="k">for</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">client_data</span><span class="p">)]</span>
-
+    
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">client_data</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Predicted selling price for Client </span><span class="si">{}</span><span class="s2">&#39;s home: $</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">price</span><span class="p">))</span>
 </pre></div>
@@ -14125,7 +14126,7 @@ Predicted selling price for Client 3&#39;s home: $886,620.00
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[479]:</div>
+<div class="prompt input_prompt">In&nbsp;[513]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># - Minimum price: $105000.0</span>
@@ -14136,38 +14137,37 @@ Predicted selling price for Client 3&#39;s home: $886,620.00
 <span class="k">def</span> <span class="nf">five_percent</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="o">.</span><span class="mi">05</span>
 
-<span class="n">pred_1</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">pred_2</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">pred_3</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">pred_1</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">pred_2</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">pred_3</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 
-<span class="n">client_1</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;RM&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;LSTAT&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;PTRATIO&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;MEDV&#39;</span><span class="p">:</span> <span class="n">pred_1</span> <span class="p">}</span>
-<span class="n">client_2</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;RM&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;LSTAT&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;PTRATIO&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;MEDV&#39;</span><span class="p">:</span> <span class="n">pred_2</span> <span class="p">}</span>
-<span class="n">client_3</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;RM&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;LSTAT&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;PTRATIO&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;MEDV&#39;</span><span class="p">:</span>  <span class="n">pred_3</span><span class="p">}</span>
+<span class="n">client_1</span><span class="p">:</span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;RM&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;LSTAT&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;PTRATIO&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;MEDV&#39;</span><span class="p">:</span> <span class="n">pred_1</span> <span class="p">}</span>
+<span class="n">client_2</span><span class="p">:</span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;RM&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;LSTAT&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">&#39;PTRATIO&#39;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s1">&#39;MEDV&#39;</span><span class="p">:</span> <span class="n">pred_2</span> <span class="p">}</span>
+<span class="n">client_3</span><span class="p">:</span><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;RM&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;LSTAT&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;PTRATIO&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;MEDV&#39;</span><span class="p">:</span>  <span class="n">pred_3</span><span class="p">}</span>
 
-<span class="n">df_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">client_1</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">df_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">client_2</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">df_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">client_3</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">client_df1</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">client_1</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">client_df2</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">client_2</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">client_df3</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">client_3</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-<span class="n">nearest_1</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">pred_1</span> <span class="o">-</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="n">pred_1</span> <span class="o">+</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_1</span><span class="p">))]</span>
-<span class="n">nearest_2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">pred_2</span> <span class="o">-</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_2</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="n">pred_2</span> <span class="o">+</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_2</span><span class="p">))]</span>
+<span class="n">nearest_1</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">pred_1</span> <span class="o">-</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="n">pred_1</span> <span class="o">+</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_1</span><span class="p">))]</span>
+<span class="n">nearest_2</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">pred_2</span> <span class="o">-</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_2</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="n">pred_2</span> <span class="o">+</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_2</span><span class="p">))]</span>
 
 <span class="c1"># let&#39;s use max price to compare since there are fewer homes around this price</span>
-<span class="n">nearest_3</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">pred_3</span> <span class="o">-</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_3</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="n">maximum_price</span><span class="p">)]</span>
+<span class="n">nearest_3</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">pred_3</span> <span class="o">-</span> <span class="n">five_percent</span><span class="p">(</span><span class="n">pred_3</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;MEDV&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="n">maximum_price</span><span class="p">)]</span>
 
-
-<span class="k">def</span> <span class="nf">print_comparison</span><span class="p">(</span><span class="n">nearest</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">print_comparison</span><span class="p">(</span><span class="n">nearest</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">client_df</span><span class="p">:</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">{len(nearest)} homes near </span><span class="si">{title}</span><span class="se">\&#39;</span><span class="s2">s predicted price point</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;min (within 5%)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">nearest</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">max (within 5%)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">nearest</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="si">{title}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">client_df</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">======================================</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<span class="n">print_comparison</span><span class="p">(</span><span class="n">nearest_1</span><span class="p">,</span> <span class="n">df_1</span><span class="p">,</span> <span class="s1">&#39;Client 1&#39;</span><span class="p">)</span>
-<span class="n">print_comparison</span><span class="p">(</span><span class="n">nearest_2</span><span class="p">,</span> <span class="n">df_2</span><span class="p">,</span> <span class="s1">&#39;Client 2&#39;</span><span class="p">)</span>
-<span class="n">print_comparison</span><span class="p">(</span><span class="n">nearest_3</span><span class="p">,</span> <span class="n">df_3</span><span class="p">,</span> <span class="s1">&#39;Client 3&#39;</span><span class="p">)</span>
+<span class="n">print_comparison</span><span class="p">(</span><span class="n">nearest_1</span><span class="p">,</span> <span class="n">client_df1</span><span class="p">,</span> <span class="s1">&#39;Client 1&#39;</span><span class="p">)</span>
+<span class="n">print_comparison</span><span class="p">(</span><span class="n">nearest_2</span><span class="p">,</span> <span class="n">client_df2</span><span class="p">,</span> <span class="s1">&#39;Client 2&#39;</span><span class="p">)</span>
+<span class="n">print_comparison</span><span class="p">(</span><span class="n">nearest_3</span><span class="p">,</span> <span class="n">client_df3</span><span class="p">,</span> <span class="s1">&#39;Client 3&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
