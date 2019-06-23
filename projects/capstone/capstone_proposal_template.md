@@ -19,7 +19,7 @@ Restoring or repairing audio is challenging for many reasons. There are some inh
 - Identifying and removing noise
 - Partial or complete loss of data during recording or due to degradation
 
-Restoring lost audio data is particularly problematic because the audio is generally not missing from the signal, but unintelligible for the listener. This solution would treat unintelligible audio as anomalous and explicitly encode some data points as missing data (null values). An imputation algorithm would then replace the missing data a plausible replacement similar to its neighbors.
+Restoring lost audio data is particularly problematic because the audio is generally not missing from the signal, but unintelligible for the listener. This solution would treat unintelligible audio as anomalous and explicitly encode some data points as missing data (null values). An imputation algorithm would then replace the missing data with a plausible replacement similar to its neighbors.
 
 ### Datasets and Inputs
 
