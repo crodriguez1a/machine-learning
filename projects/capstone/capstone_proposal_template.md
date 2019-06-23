@@ -40,11 +40,15 @@ The goal of using two inputs is to validate that the technique can work generall
 
 This solution treats unintelligible audio as anomalous and explicitly encodes the data point as missing data (null value). An imputation algorithm will then replace the missing data point inserting a plausible value that is similar to its neighbors.
 
-Noise and unwanted signal sources are cleaned as part of pre-processing. Any desired source audio that audibly diminished during pre-processing is also replaced.
+Noise and unwanted signal sources are cleaned as part of pre-processing. Any desired source audio that is audibly diminished during pre-processing is also replaced.
 
 ### Benchmark Model
 
-As a benchmark, the outputs will be compared to a high-fidelity digital recording. The benchmark, when analyzed, should not present any noise or anomalies which is ultimately the goal of the solution.   
+As a benchmark, the outputs will be compared to a high-fidelity digital recording. The benchmark, when analyzed, should not present any noise or anomalies which is ultimately the goal of the solution.
+
+*Interview with Barack Obama*
+
+- [Barack Obama discusses dancing on David Letterman's new Netflix show](https://www.youtube.com/watch?v=SPCYaMmPnIQ)
 
 ### Evaluation Metrics
 
@@ -61,14 +65,14 @@ In theory, the solution should sequentially accomplish these overarching tasks:
 I. Noise removal with FFTT and/or DBSCAN
   - Fast Fourier Transform noise reduction could potentially aide in removal of typical and expected noise frequencies.
 
-  - DBSCAN might be a better overall solution because it may protect sections that are valuable and candidates for substitution.
+  - DBSCAN might be a better overall solution because it may protect sections that are candidates for substitution.
 
    Points that are generally unreachable  from other points can be considered noise and can cleaned from the dataset. The threshold for noise should be high so as not to inadvertently remove data that can be substituted.
 
 II. Anomaly Detection with DBSCAN
   - For the purpose of this solution, anomalies should be distinguishable from noise. Anomalous data points should display more connectedness to points that represent the desired source audio.
 
-  To make this distinction, anomalous sections may require a separate analysis using audio-specific characteristics like Fourier properties
+  To make this distinction, anomalous sections may require a separate analysis using audio-specific characteristics like Fourier properties.
 
 III. Encoding of anomalous points as missing data, temporarily substituting with `None`
 
