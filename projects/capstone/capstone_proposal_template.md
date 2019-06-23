@@ -48,31 +48,44 @@ As a benchmark, the outputs will be compared to a high-fidelity digital recordin
 
 ### Evaluation Metrics
 
-To evaluate, the solution will measure the mean Silhouette Coefficient (silhouette score). The output data should reflect an optimal value for `n_clusters` that is relatively small.  Since a silhouette analysis can be ambivalent in deciding between 2 and 4 clusters, the solution should also evaluate the size of the individual clusters.
+To evaluate, the solution will measure the mean Silhouette Coefficient (silhouette score). The output data should reflect an optimal value for `n_clusters` that is relatively small.  Since a silhouette analysis can be ambivalent in deciding between 2 and 4 clusters (1), the solution should also evaluate the size of the individual clusters.
 
 Larger sized clusters should represent the desired source audio, while smaller clusters should represent naturally occurring noise and/or other less significant source audio.
 
 ### Project Design
-[//]: # (_(approx. 1 page)_)
+
+In theory, the solution should sequentially accomplish these overarching tasks:
+
+![workflow](flow.png "Workflow")
+
+I. Noise removal with FFTT and/or DBSCAN
+  - Fast Fourier Transform noise reduction could potentially aide in removal of typical and expected noise frequencies.
+
+  - DBSCAN might be a better overall solution because it may protect sections that are valuable and candidates for substitution.
+
+   Points that are generally unreachable  from other points can be considered noise and can cleaned from the dataset. The threshold for noise should be high so as not to inadvertently remove data that can be substituted.
+
+II. Anomaly Detection with DBSCAN
+  - For the purpose of this solution, anomalies should be distinguishable from noise. Anomalous data points should display more connectedness to points that represent the desired source audio.
+
+  To make this distinction, anomalous sections may require a separate analysis using audio-specific characteristics like Fourier properties
+
+III. Encoding of anomalous points as missing data, temporarily substituting with `None`
+
+  - Once Identified, the solution will treat anomalies as missing data simply by replacing those points with null values (intended to resemble missing values in a structured data set).
+
+IV. Replace missing data points leveraging K-Nearest Neighbors
+
+  - The solution will then attempt to replace the missing values with statistically similar values as predicted using **KNN**.
+
+  > "The assumption behind using KNN for missing values is that a point value can be approximated by the values of the points that are closest to it, based on other variables." (2)
 
 
 
-In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+**References**
 
+1. https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html
 
-**Sources**
+1. https://towardsdatascience.com/the-use-of-knn-for-missing-values-cf33d935c637
 
-- https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html
-
-- https://towardsdatascience.com/the-use-of-knn-for-missing-values-cf33d935c637
-
-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4959387/
 -----------
-
-**Before submitting your proposal, ask yourself. . .**
-
-- Does the proposal you have written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Solution Statement** and **Project Design**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your proposal?
-- Have you properly proofread your proposal to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
